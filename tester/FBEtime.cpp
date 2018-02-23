@@ -26,6 +26,7 @@ int main() {
   };
   
   FILE *out = fopen("data/FBEtimeL2.csv", "w");
+  fprintf(out, "step, L2\n");
   for (auto &dt : DT) {
     printf("Running with M = %d, N = %d, dt = %e\n", M, N, dt);
     auto solver = Solver::FBESolver(param, M, N, dt);

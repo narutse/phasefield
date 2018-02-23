@@ -24,6 +24,7 @@ int main() {
   };
   
   FILE *out = fopen("data/FBEspaceL2.csv", "w");
+  fprintf(out, "grid, L2\n");
   for (auto &p : MN) {
     printf("Running with M = %d, N = %d\n", p.first, p.second);
     auto solver = Solver::FBESolver(param, p.first, p.second, dt);

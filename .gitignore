@@ -3,3 +3,9 @@
 .vscode/*
 
 bashscripts/*
+bin/*
+
+data/measurespace.out
+data/measuretime.out
+bin/FBEspace
+bin/FBEtime
