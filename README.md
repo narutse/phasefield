@@ -14,8 +14,11 @@ make
 
 ## Part a) convergence test
 Here is my plot for the spatial error, as specified in the benchmark problem.
+
 ![alt text](plots/FBEspace.png)
+
 The spatial order of accuracy matches the theoretical one (second order).
 
 ![alt text](plots/FBEtime.png)
+
 The temporal order of accuracy matches the theoretical one (first order). However, when the time step size is small enough, the spatial error starts dominating.
