@@ -24,7 +24,7 @@ int main() {
   };
   
   FILE *out = fopen("data/FBEspaceL2.csv", "w");
-  fprintf(out, "grid, L2\n");
+  fprintf(out, "grid,L2\n");
   for (auto &p : MN) {
     printf("Running with M = %d, N = %d\n", p.first, p.second);
     auto solver = Solver::FBESolver(param, p.first, p.second, dt);
@@ -33,7 +33,7 @@ int main() {
     auto numerical = solver.Solve();
     double l2 = L2(analytic, numerical, dx, dy);
     printf("\rdx = %f, dy = %f, L2 = %e\n", dx, dy, l2);
-    fprintf(out, "%e, %e\n", std::sqrt(dx*dy), l2);
+    fprintf(out, "%e,%e\n", std::sqrt(dx*dy), l2);
     fflush(out);
   }
   fclose(out);
